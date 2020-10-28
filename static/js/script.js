@@ -1,0 +1,11 @@
+
+
+var output = document.getElementById('output');
+
+var loadFile = function(event) {
+
+    output.src = URL.createObjectURL(event.target.files[0]);
+    output.onload = function() {
+      URL.revokeObjectURL(output.src) // free memory
+    }
+  };

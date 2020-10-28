@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  
+    <form method="POST" action="/image"  enctype="multipart/form-data">
+        <p><input type="file" name="file"></p>
+        <p><input type="submit" name="Submit_File"  value="SubmitFile"></p>
+
+
+      </form>
+
+
+    <img src="{{ imgFile }}"  style="width:500px;  height:500;">
+    <img src="{{ ReadyImg }}"  style="width:500px;  height:500;">
+
+    <h1>{{ NotFoundImage }}</h1>
+    <h1> путь до файла {{ ReadyImg }}</h1>
+
+    <form method="POST" action="/imageReady">
+        <input type="submit" name="SubmitImgFil"  value="BtnFilter1"></p>
+        <input type="submit" name="SubmitImgFil"  value="BtnFilter2"></p>
+        <input type="submit" name="SubmitImgFil"  value="BtnFilter3"></p>
+
+    </form>
+
+
+
+
+
+    <img id = "output" style="width:500px;  height:500;"><br/>
+    
+
+
+    <script type = "text/javascript"  src = "{{ url_for('static', filename = 'js/script.js') }}" ></script>
+</body>
+</html>
